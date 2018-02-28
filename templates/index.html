@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Belly Button Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<div class="jumbotron">
+  <div class = "container" style = "text-align: center;">
+    <h1 style = "font-weight: bold;">Belly Button Biodiversity Dashboard</h1>
+    <p></p>
+    <p>Interactive learning about belly button goop</p>
+  </div>
+</div>
+
+<div class = "container">
+  <label for = "selDataset">Select an ID: </label>
+  <select id="selDataset" onchange="optionChanged(this.value)"></select>
+  <p></p>
+</div>
+
+<div class = "container">
+  <row>
+    <div class = "panel panel-primary" style = "width: 200px; height: 200px;">
+      <div class = "panel-heading" style = "font-weight: bold; text-align: center; font-size: 18px;">Sample Metadata</div>
+      <div id = "meta" class = "panel-body"></div>
+    </div>
+    <div id = "pie"></div>
+  </row>
+  <row>
+    <div id = "bubble"></div>
+    <div id = "gauge"></div>
+  </row>
+</div>
+
+
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</html>
