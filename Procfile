@@ -1,1 +1,1 @@
-worker: python ChatterBot.py
+worker: python app.py
